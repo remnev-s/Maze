@@ -1,0 +1,17 @@
+@use './color' as *;
+@use './mixin' as *;
+
+.page {
+  background-color: $bg-main-page;
+  min-height: 100vh;
+
+  &__wrapper {
+    max-width: 198rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+
+    @media (max-width: 414px) {
+      padding: 0;
+    }
+  }
+}

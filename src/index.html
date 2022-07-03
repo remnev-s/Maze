@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Ключевые слова" />
+    <meta name="description" content="Описание сайта" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Making an order</title>
+  </head>
+  <body class="root">
+    <div class="page">
+      <header class="header page__wrapper">
+        <h1 class="header__title">Оформление заказа</h1>
+      </header>
+      <main class="content page__wrapper">
+        <div class="content__inner">
+          <section class="delivery content__wrapper">
+            <div class="delivery__head">
+              <h2 class="delivery__head-text">Доставка</h2>
+
+              <div class="button-swipe">
+                <a
+                  href="#"
+                  class="
+                    button-swipe__arrow
+                    button-swipe__arrow-left
+                    button-swipe__arrow-disabled
+                  "
+                  role="button"
+                  aria-label="left"
+                >
+                  left
+                </a>
+                <a
+                  href="#"
+                  class="button-swipe__arrow button-swipe__arrow-right"
+                  role="button"
+                  aria-label="right"
+                >
+                  right
+                </a>
+              </div>
+            </div>
+
+            <div class="tabs tabs-delivery">
+              <ul class="tabs__inner tabs-list tabs-list-active">
+                <li class="tabs__inner-list">
+                  <div class="tabs__inner-text">
+                    <p class="tabs__inner-text_heading">
+                      Почта России, курьер — 24-26 сент.
+                    </p>
+                    <p class="tabs__inner-text_subheading">
+                      ул. Академика Королева, 73/3, Петропавловск- Камчатский,
+                      683000
+                    </p>
+                    <p class="tabs__inner-text_price">+367 ₽</p>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="tabs__inner tabs-list">
+                <li class="tabs__inner-list">
+                  <div class="tabs__inner-text">
+                    <p class="tabs__inner-text_heading">
+                      Лабиринт, курьер — 25 сент.
+                    </p>
+                    <p class="tabs__inner-text_subheading">
+                      Можайское шоссе, д. 21, кв. 50, Москва, 121471
+                    </p>
+                    <p class="tabs__inner-text_price">0 ₽</p>
+                  </div>
+                </li>
+              </ul>
+              <a href="#" class="tabs__link">Выбрать новое место и способ </a>
+            </div>
+
+            <div class="tabs tabs-times">
+              <ul
+                class="tabs__inner tabs-list tabs__inner-times tabs-list-active"
+              >
+                <li class="tabs__inner-list">
+                  <div class="tabs__inner-text">
+                    <p
+                      class="
+                        tabs__inner-text_heading tabs__inner-text_heading-hidden
+                      "
+                    >
+                      пн, 24 сен — ср, 26 сен
+                    </p>
+                    <p class="tabs__inner-text_heading visibility-hidden">
+                      вт, 25 сен
+                    </p>
+                    <p class="tabs__inner-text_subheading">10:00–19:00</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tabs__inner tabs__inner-times tabs-list">
+                <li class="tabs__inner-list">
+                  <div class="tabs__inner-text">
+                    <p
+                      class="
+                        tabs__inner-text_heading tabs__inner-text_heading-hidden
+                      "
+                    >
+                      чт, 27 сен — пт, 28 сен
+                    </p>
+                    <p class="tabs__inner-text_heading visibility-hidden">
+                      ср, 26 сен
+                    </p>
+                    <p class="tabs__inner-text_subheading">10:00–19:00</p>
+                  </div>
+                </li>
+              </ul>
+              <a href="#" class="tabs__link tabs__link-times"
+                >Другие дата и время
+              </a>
+            </div>
+
+            <div class="delivery__checkbox">
+              <label class="delivery__checkbox-label">
+                <input
+                  class="delivery__checkbox-input input-active"
+                  type="checkbox"
+                  checked
+                />
+                Viber/СМС уведомления о статусе заказа
+              </label>
+
+              <label class="delivery__checkbox-label">
+                <input
+                  class="delivery__checkbox-input"
+                  type="checkbox"
+                  checked
+                />
+                Оставить у двери (бесконтактная доставка)
+              </label>
+            </div>
+
+            <!-- ПОЛУЧАТЕЛЬ -->
+            <div class="recipient">
+              <h2 class="recipient__heading">Получатель</h2>
+              <a href="#" class="recipient__link recipient__link-user"
+                >Новый получатель</a
+              >
+
+              <div class="recipient-data">
+                <label class="recipient-data__label">Имя и фамилия</label>
+                <select class="recipient-data__select">
+                  <option value="name">
+                    Вольфганг Вениаминович Константинопольский
+                  </option>
+                </select>
+              </div>
+
+              <div class="recipient-data recipient-data__phone">
+                <label class="recipient-data__label">Контактный телефон</label>
+                <select class="recipient-data__select">
+                  <option class="option" value="phone">+7 910 234-56-78</option>
+                </select>
+              </div>
+              <a href="#" class="recipient__link recipient__link-phone"
+                >Новый телефон</a
+              >
+            </div>
+          </section>
+
+          <section class="cart content__wrapper">
+            <h2 class="cart__heading">В заказе 4 товара <span>(2 кг)</span></h2>
+            <ul class="cart__list">
+              <li class="cart__list-inner">
+                <span class="cart__list-name">Цена товаров</span>
+                <span class="cart__list-price">29 456 ₽</span>
+              </li>
+              <li class="cart__list-inner">
+                <span class="cart__list-name">Все скидки</span>
+                <span class="cart__list-price">–7 732 ₽</span>
+              </li>
+              <li class="cart__list-inner">
+                <span class="cart__list-name">Скидка за предоплату</span>
+                <span class="cart__list-price">–3%</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner page__wrapper">
+          <div class="footer__content content__wrapper">
+            <button class="button button-order">Оформить и оплатить</button>
+            <div class="footer__total">
+              <p class="footer__total-text">Итого к оплате на сайте:</p>
+              <p class="footer__total-price"><span>К оплате: </span> 21 072₽</p>
+              <a href="#" class="footer__link-more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/script.min.js"></script>
+  </body>
+</html>

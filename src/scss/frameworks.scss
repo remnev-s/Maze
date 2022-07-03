@@ -1,0 +1,17 @@
+@forward 'normalize';
+@forward 'fonts';
+@forward 'color';
+@forward 'global';
+@forward 'vendor';
+
+@forward 'blocks/page/page.scss';
+@forward 'blocks/header/header.scss';
+@forward 'blocks/content/content.scss';
+@forward 'blocks/delivery/delivery.scss';
+@forward 'blocks/button-swipe/button-swipe.scss';
+@forward 'blocks/tabs/tabs.scss';
+@forward 'blocks/recipient/recipient.scss';
+@forward 'blocks/cart/cart.scss';
+
+@forward 'blocks/button/button.scss';
+@forward 'blocks/footer/footer.scss';

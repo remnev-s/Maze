@@ -1,0 +1,66 @@
+@use './color' as *;
+@use './mixin' as *;
+
+.footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #d6d6d6;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 2rem 4.3rem;
+
+    @media (max-width: 768px) {
+      display: grid;
+      justify-content: stretch;
+    }
+  }
+
+  &__link-more {
+    display: none;
+    text-decoration: none;
+    color: #065cc2;
+    font-size: 1.4rem;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-row: 1/2;
+      justify-content: space-between;
+      margin-bottom: 1.4rem;
+    }
+
+    &-text {
+      margin-right: 11rem;
+      font-size: 2.2rem;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-price {
+      display: flex;
+      font-size: 3.5rem;
+      font-weight: bold;
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+
+      & span {
+        display: none;
+        @media (max-width: 768px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}

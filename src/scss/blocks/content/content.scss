@@ -1,0 +1,25 @@
+@use '././mixin' as *;
+@use '././color' as *;
+
+.content {
+  &__inner {
+    min-height: calc(100vh - 22rem);
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 0.7rem 0.7rem 0 0;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: fit-content(1120px) 1fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrapper {
+    padding: 4rem 8.2rem 5rem 3.6rem;
+    @media (max-width: 414px) {
+      padding: 2.4rem 1.6rem;
+    }
+  }
+}

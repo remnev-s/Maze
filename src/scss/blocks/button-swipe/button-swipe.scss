@@ -1,0 +1,32 @@
+@use '././color' as *;
+
+.button-swipe {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &__arrow {
+    text-decoration: none;
+    font-size: 0;
+
+    padding: 20px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    background-position: center center;
+
+    &-left {
+      background-image: url(../img/arrow-left.svg);
+      background-repeat: no-repeat;
+      margin-right: 0.4rem;
+    }
+    &-right {
+      background-image: url(../img/arrow-right.svg);
+      background-repeat: no-repeat;
+    }
+
+    &-disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+}

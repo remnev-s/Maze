@@ -1,0 +1,133 @@
+@use '././mixin' as *;
+@use '././color' as *;
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.4rem;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 48.9rem;
+    min-height: 15.2rem;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    padding: 2rem;
+    border: 2px solid $border-color;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    @media (max-width: 414px) {
+      width: 26rem;
+      padding: 1.6rem 2rem;
+    }
+
+    &-list {
+      list-style-type: none;
+      width: 100%;
+    }
+
+    &-text {
+      display: grid;
+      grid-template-columns: fit-content(36rem) 1fr;
+
+      @media (max-width: 414px) {
+        grid-template-columns: 1fr;
+        font-size: 1.7rem;
+      }
+
+      &_heading {
+        font-weight: bold;
+        @media (max-width: 414px) {
+          font-size: 1.7rem;
+          line-height: 2.1rem;
+          max-width: 17.3rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &_heading-hidden {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &_subheading {
+        grid-column: 1/2;
+        @media (max-width: 414px) {
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      &_price {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: end;
+
+        @media (max-width: 414px) {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          align-self: start;
+          justify-self: start;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+        }
+      }
+    }
+  }
+  &__link {
+    @include link();
+    margin: 1.4rem 0 3rem;
+  }
+}
+
+.tabs-list-active {
+  border: 2px solid #065cc2;
+  cursor: default;
+}
+
+.tabs-times {
+  display: flex;
+  align-items: end;
+  margin-bottom: 1.4rem;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 27.2rem 27.2rem;
+    @media (max-width: 414px) {
+      grid-template-columns: 12.7rem 12.7rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  .tabs__inner-times {
+    width: 27.2rem;
+    min-height: 9.6rem;
+    @media (max-width: 414px) {
+      width: 12.7rem;
+    }
+  }
+}
+
+.tabs__link-times {
+  margin-left: 3rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 414px) {
+    grid-column: 1/3;
+  }
+}
+
+.tabs-delivery {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
